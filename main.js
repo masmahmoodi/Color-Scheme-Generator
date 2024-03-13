@@ -1,6 +1,5 @@
 let colorsContainer = document.querySelector(".color-container")
 let chooseColor = document.querySelector(".color-input")
-
 let form = document.querySelector(".header-container")
 
 

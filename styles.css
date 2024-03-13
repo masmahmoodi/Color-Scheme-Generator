@@ -25,22 +25,35 @@ header{
     width: 100%;
 }
 
+.color-mode {
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  .color-mode:hover,
+  button:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .color-mode:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+  }
+  
 button{
     padding: 0px 6px;
     border: none;
 }
 
-button:hover{
-    background-color: rgb(41, 173, 41);
-}
 button:active{
-    background-color: aqua;
+    background-color: rgb(61, 97, 97);
 }
 select{
     padding: 0px 40px;
 }
 
 select, button{
+    
     border: 1px solid gray;
     padding-top:6px;
     padding-bottom: 6px;
@@ -107,6 +120,11 @@ p{
     select{
         padding: 6px 80px;
     }
-
+    .color-mode,
+    button{
+        font-size: 16px;
+    }
 
 }
+
+
