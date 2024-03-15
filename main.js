@@ -2,7 +2,7 @@ let colorsContainer = document.querySelector(".color-container")
 let chooseColor = document.querySelector(".color-input")
 let form = document.querySelector(".header-container")
 
-
+// selecting color
 form.addEventListener("submit",(e)=>{
     e.preventDefault()
     const colorMode = document.querySelector(".color-mode").value
@@ -13,6 +13,7 @@ form.addEventListener("submit",(e)=>{
     })
 })
 
+// showing the defualt scheme 
 fetch(`https://www.thecolorapi.com/scheme?hex=${chooseColor.value.substr(1)}`)
 .then(response => response.json())
 .then(data => {
@@ -20,7 +21,7 @@ fetch(`https://www.thecolorapi.com/scheme?hex=${chooseColor.value.substr(1)}`)
 
 })
 
-
+// showing scheme 
 function placingHtml(data){
     let html = ``
     for (let i of data.colors){
@@ -36,11 +37,10 @@ function placingHtml(data){
 }
 
 
-
+// copy logic
 function copyColorValue(colorValue) {
     navigator.clipboard.writeText(colorValue)
 }
-
 
 colorsContainer.addEventListener("click", (e) => {
     const colorValue = e.target.closest("div").dataset.color;
@@ -50,6 +50,7 @@ colorsContainer.addEventListener("click", (e) => {
     }
 })
 
+// showing popup to user
 function colorValuePopup() {
     Swal.fire({
         position: 'center',
